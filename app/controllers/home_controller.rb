@@ -11,4 +11,23 @@ class HomeController < ApplicationController
 
     render html: message.html_safe
   end
+
+  def getquerystringvalues
+    
+    message=""
+    if params[:message]
+      message+="<h1>Message is: " + params[:message] + "</h1>"
+    else
+      message+="<h1>You haven't supplied any message.</h1>"
+    end
+
+    if params[:country]
+      message+="<h1>Your country is: " + params[:country] + "</h1>"
+    else
+      message+="<h1>You haven't supplied any country.</h1>"
+    end
+
+    render html: message.html_safe
+
+  end
 end
