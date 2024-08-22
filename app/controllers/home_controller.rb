@@ -42,4 +42,9 @@ class HomeController < ApplicationController
     @message+="<h5>Hello world from Rails 7</h5>"
     @message+="<h6>Hello world from Rails 7</h6>"
   end
+
+  def showdatetimeinfo
+    @currenttime = DateTime.now
+  end
+
 end
