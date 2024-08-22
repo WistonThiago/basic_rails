@@ -13,7 +13,7 @@ class HomeController < ApplicationController
   end
 
   def getquerystringvalues
-    
+
     message=""
     if params[:message]
       message+="<h1>Message is: " + params[:message] + "</h1>"
@@ -26,6 +26,9 @@ class HomeController < ApplicationController
     else
       message+="<h1>You haven't supplied any country.</h1>"
     end
+
+    message+="<h1>Our controller name is: " + params[:controller] + "</h1>"
+    message+="<h1>Our action name is: " + params[:action] + "</h1>"
 
     render html: message.html_safe
 
