@@ -58,4 +58,11 @@ class HomeController < ApplicationController
     }
   end
   
+  def loopthrougharrays
+    @products = []
+    @products.push( {'id':1, 'name':"Ryzen 3990", 'quantity':10, 'stock':5, 'cost':3000} )
+    @products.push( {'id':2, 'name':"Ryzen 3700", 'quantity':18, 'stock':5, 'cost':2500} )
+    @products.push( {'id':3, 'name':"i5 12000", 'quantity':15, 'stock':5, 'cost':1800} )
+  end
+
 end

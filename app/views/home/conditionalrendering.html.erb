@@ -23,3 +23,11 @@
 <% else %>
     <h1> Hi, <%= @data[:name] %>, you're just a guest, please log in.</h1>
 <% end %>
+
+<% if @data[:countryCode] == "US" %>
+    <h1>Currency is: USD</h1>
+<% elsif @data[:countryCode] == "BR" %>
+    <h1>Currency is: BRL</h1>
+<% else %>
+    <h1>Currency not detected</h1>
+<% end %>
