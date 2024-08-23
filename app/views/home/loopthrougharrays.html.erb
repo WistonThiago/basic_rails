@@ -34,3 +34,9 @@
         <li><input type="checkbox"><%= product[:name] %></li>
     <% end %>
 </ol>
+
+<select>
+    <% @products.each do |product| %>
+        <option><%= product[:name] %></option>
+    <% end %>
+</select>
