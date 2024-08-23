@@ -22,3 +22,15 @@
         </tr>
     </tbody>
 </table>
+
+<ul>
+    <% @products.each do |product| %>
+        <li><%= product[:name] %></li>
+    <% end %>
+</ul>
+
+<ol>
+    <% @products.each do |product| %>
+        <li><input type="checkbox"><%= product[:name] %></li>
+    <% end %>
+</ol>
