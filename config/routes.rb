@@ -13,4 +13,7 @@ Rails.application.routes.draw do
   get "home/showdatetimeinfo" => "home#showdatetimeinfo"
   get "home/conditionalrendering" => "home#conditionalrendering"
   get "home/loopthrougharrays" => "home#loopthrougharrays"
+
+  get "home/loadusers" => "home#loadusers"
+  get "home/loadproducts" => "home#loadproducts"
 end

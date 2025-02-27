@@ -60,11 +60,31 @@ class HomeController < ApplicationController
   
   def loopthrougharrays
     @products = []
-    debugger
+    #debugger
     @products.push( {'id':1, 'name':"Ryzen 3990", 'quantity':10, 'stock':5, 'cost':3000} )
-    debugger
+    #debugger
     @products.push( {'id':2, 'name':"Ryzen 3700", 'quantity':18, 'stock':5, 'cost':2500} )
     @products.push( {'id':3, 'name':"i5 12000", 'quantity':15, 'stock':5, 'cost':1800} )
+  end
+
+  def loadusers()
+    base_url = "https://fakestoreapi.com/users"
+    @users=CallRestAPIUsers(base_url)
+  end
+
+  def CallRestAPIUsers(base_url)
+    response=HTTParty.get(base_url)
+    return response.success? ? response : []
+  end
+
+  def loadproducts()
+    products_url = "https://fakestoreapi.com/products"
+    @products=CallRestAPIProducts(products_url)
+  end
+
+  def CallRestAPIProducts(products_url)
+    response=HTTParty.get(products_url)
+    return response.success? ? response: []
   end
 
 end
