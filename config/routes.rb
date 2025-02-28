@@ -16,4 +16,6 @@ Rails.application.routes.draw do
 
   get "home/loadusers" => "home#loadusers"
   get "home/loadproducts" => "home#loadproducts"
+  get "home/loadusersimages" => "home#loadusersimages"
+  get "home/loaduserdetails/:id" => "home#loaduserdetails", as: "LoadUserDetails"
 end
